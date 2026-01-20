@@ -164,7 +164,7 @@ Be warm and helpful. Offer to help with questions about the knowledge base."""
                 chat_prompt,
                 generation_config=genai.types.GenerationConfig(
                     max_output_tokens=256,
-                    temperature=0.7,
+                    temperature=0.3,
                 ),
             )
 
