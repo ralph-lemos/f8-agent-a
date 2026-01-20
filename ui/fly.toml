@@ -1,0 +1,18 @@
+# Fly.io configuration for Fast Agent UI
+app = 'fast-agent-ui'
+primary_region = 'gru'
+
+[build]
+
+[http_service]
+  internal_port = 8501
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '256mb'
+  cpu_kind = 'shared'
+  cpus = 1
