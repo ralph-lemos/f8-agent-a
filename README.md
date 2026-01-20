@@ -1,6 +1,6 @@
 # Fast Agent
 
-Lightning-fast RAG agent for Factorate Knowledge Hub. Targets <4 second response times.
+Lightning-fast RAG agent for Factor8 Knowledge Hub. Targets <4 second response times.
 
 ## Local Development
 

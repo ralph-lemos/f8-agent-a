@@ -61,7 +61,7 @@ Reply:"""
         return True
 
 
-SYSTEM_PROMPT = """Fast assistant for Factorate Knowledge Hub. Be BRIEF (2-3 sentences max).
+SYSTEM_PROMPT = """Fast assistant for Factor8 Knowledge Hub. Be BRIEF (2-3 sentences max).
 
 Tools: search_kb (documents), get_entities (relationships)
 
@@ -156,7 +156,7 @@ async def fast_chat_stream(
             # Direct response for greetings/casual chat
             logger.info("[AGENT] Classified as CHAT - responding directly")
 
-            chat_prompt = f"""You are a friendly assistant for the Factorate Knowledge Hub.
+            chat_prompt = f"""You are a friendly assistant for the Factor8 Knowledge Hub.
 Respond naturally and briefly (1-2 sentences) to: "{message}"
 Be warm and helpful. Offer to help with questions about the knowledge base."""
 

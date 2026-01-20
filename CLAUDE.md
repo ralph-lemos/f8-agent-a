@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-**Fast Agent** - Lightning-fast RAG agent for Factorate Knowledge Hub. Uses Gemini 2.5 Flash-Lite for <4 second responses.
+**Fast Agent** - Lightning-fast RAG agent for Factor8 Knowledge Hub. Uses Gemini 2.5 Flash-Lite for <4 second responses.
 
 ## Locations
 

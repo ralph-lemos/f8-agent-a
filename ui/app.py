@@ -1,9 +1,8 @@
 """
-Streamlit Chat UI for Fast Agent.
+Streamlit Chat UI for Factor8 Fast Agent.
 
 Usage:
-    1. Start FastAPI backend: uvicorn fast_agent.main:app --port 8003
-    2. Run this UI: streamlit run ui/app.py
+    streamlit run ui/app.py
 """
 import streamlit as st
 import httpx
@@ -23,39 +22,35 @@ if sys.platform == "win32":
 # ============================================================
 
 st.set_page_config(
-    page_title="Fast Agent",
-    page_icon="lightning",
-    layout="wide"
+    page_title="Factor8 Agent",
+    page_icon="⚡",
+    layout="centered",
+    initial_sidebar_state="collapsed"
 )
 
-# ============================================================
-# CUSTOM CSS
-# ============================================================
-
+# Hide sidebar completely
 st.markdown("""
 <style>
-    /* Fix chat input at bottom */
+    [data-testid="stSidebar"] {display: none;}
+    [data-testid="collapsedControl"] {display: none;}
+
+    /* Chat input styling */
     .stChatInput {
         position: fixed;
         bottom: 0;
-        width: calc(100% - 350px);
+        width: 100%;
+        max-width: 730px;
+        left: 50%;
+        transform: translateX(-50%);
         background: var(--background-color);
         padding: 1rem 0;
         z-index: 999;
     }
 
-    /* Add padding at bottom */
+    /* Add padding at bottom for chat input */
     .main .block-container {
         padding-bottom: 100px;
-    }
-
-    /* Metrics styling */
-    .metric-card {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 1rem;
-        border-radius: 10px;
-        color: white;
-        text-align: center;
+        max-width: 800px;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -71,13 +66,16 @@ if "api_url" not in st.session_state:
     st.session_state.api_url = "https://claude-code-dev.fly.dev"
 
 if "api_key" not in st.session_state:
-    st.session_state.api_key = "your-api-key-for-authentication"
+    st.session_state.api_key = ""
 
 if "org_id" not in st.session_state:
     st.session_state.org_id = "00000000-0000-0000-0000-000000000001"
 
 if "session_id" not in st.session_state:
     st.session_state.session_id = None
+
+if "configured" not in st.session_state:
+    st.session_state.configured = False
 
 # ============================================================
 # API CLIENT
@@ -149,96 +147,42 @@ def run_async(coro):
 
 
 # ============================================================
-# SIDEBAR
+# MAIN CONTENT
 # ============================================================
 
-with st.sidebar:
-    st.title("Fast Agent")
-    st.caption("Lightning-fast responses powered by Gemini 2.5 Flash")
+st.title("⚡ Factor8 Agent")
 
-    st.divider()
-
-    st.subheader("Settings")
-
-    api_url = st.text_input(
-        "API URL",
-        value=st.session_state.api_url,
-        help="URL of the Fast Agent API"
-    )
-    if api_url != st.session_state.api_url:
-        st.session_state.api_url = api_url
+# Configuration section (only show if not configured)
+if not st.session_state.configured or not st.session_state.api_key:
+    st.caption("Enter your API key to start chatting")
 
     api_key = st.text_input(
         "API Key",
         value=st.session_state.api_key,
         type="password",
-        help="Your API authentication key"
+        placeholder="Enter your API key"
     )
-    if api_key != st.session_state.api_key:
+
+    if api_key:
         st.session_state.api_key = api_key
-
-    org_id = st.text_input(
-        "Organization ID",
-        value=st.session_state.org_id,
-        help="Your organization UUID"
-    )
-    if org_id != st.session_state.org_id:
-        st.session_state.org_id = org_id
-
-    st.divider()
-
-    if st.button("Clear Chat", use_container_width=True):
-        st.session_state.messages = []
-        st.session_state.session_id = None
+        st.session_state.configured = True
         st.rerun()
+else:
+    st.caption("Ask questions about your knowledge base")
 
-    st.divider()
+    # Display chat history
+    for msg in st.session_state.messages:
+        with st.chat_message(msg["role"]):
+            st.markdown(msg["content"])
 
-    # Performance stats
-    st.subheader("Performance")
-    if st.session_state.messages:
-        # Calculate average response time
-        times = [m.get("metadata", {}).get("duration_ms", 0)
-                 for m in st.session_state.messages
-                 if m.get("role") == "assistant" and m.get("metadata")]
-        if times:
-            avg_time = sum(times) / len(times) / 1000
-            st.metric("Avg Response", f"{avg_time:.2f}s")
-            st.caption(f"Based on {len(times)} responses")
+            # Show metrics for assistant messages
+            if msg["role"] == "assistant" and msg.get("metadata"):
+                metadata = msg["metadata"]
+                duration_ms = metadata.get("duration_ms", 0)
+                st.caption(f"⚡ {duration_ms/1000:.2f}s")
 
-    # Status
-    st.divider()
-    if st.session_state.api_key:
-        st.success("Ready")
-    else:
-        st.warning("Enter API Key")
-
-
-# ============================================================
-# MAIN CONTENT
-# ============================================================
-
-st.title("Fast Agent Chat")
-st.caption("Ask questions about your knowledge base - responses in ~3 seconds")
-
-# Display chat history
-for msg in st.session_state.messages:
-    with st.chat_message(msg["role"]):
-        st.markdown(msg["content"])
-
-        # Show metrics for assistant messages
-        if msg["role"] == "assistant" and msg.get("metadata"):
-            metadata = msg["metadata"]
-            duration_ms = metadata.get("duration_ms", 0)
-            model = metadata.get("model", "unknown")
-
-            st.caption(f"{duration_ms/1000:.2f}s | {model}")
-
-# Chat input
-if prompt := st.chat_input("Ask about your knowledge base..."):
-    if not st.session_state.api_key:
-        st.error("Please enter your API key in the sidebar.")
-    else:
+    # Chat input
+    if prompt := st.chat_input("Ask anything..."):
         # Add user message
         st.session_state.messages.append({"role": "user", "content": prompt})
 
@@ -289,16 +233,10 @@ if prompt := st.chat_input("Ask about your knowledge base..."):
             # Display final response
             response_placeholder.markdown(full_response)
 
-            # Show metrics
+            # Show response time
             if metadata:
                 duration_ms = metadata.get("duration_ms", 0)
-                model = metadata.get("model", "gemini-2.5-flash")
-                tools = metadata.get("tools_used", [])
-
-                cols = st.columns(3)
-                cols[0].metric("Response Time", f"{duration_ms/1000:.2f}s")
-                cols[1].metric("Model", model.split("-")[-1].title())
-                cols[2].metric("Tools", len(tools))
+                st.caption(f"⚡ {duration_ms/1000:.2f}s")
 
             # Save assistant message
             st.session_state.messages.append({
