@@ -192,9 +192,8 @@ else:
 
         # Stream assistant response
         with st.chat_message("assistant"):
+            # Status box for streaming updates only
             with st.status("Thinking...", expanded=True) as status:
-                response_placeholder = st.empty()
-
                 try:
                     async def collect_response():
                         full_response = ""
@@ -207,20 +206,18 @@ else:
                             elif chunk["type"] == "answer":
                                 full_response = chunk["content"]
                                 metadata = chunk.get("metadata", {})
-                                response_placeholder.markdown(full_response)
 
                             elif chunk["type"] == "error":
                                 full_response = f"Error: {chunk['content']}"
-                                response_placeholder.markdown(full_response)
 
                         return full_response, metadata
 
                     full_response, metadata = run_async(collect_response())
 
-                    # Update status
+                    # Update status to complete and collapse
                     duration_ms = metadata.get("duration_ms", 0)
                     status.update(
-                        label=f"Done in {duration_ms/1000:.2f}s",
+                        label=f"⚡ {duration_ms/1000:.2f}s",
                         state="complete",
                         expanded=False
                     )
@@ -230,13 +227,8 @@ else:
                     full_response = f"Error: {str(e)}"
                     metadata = {}
 
-            # Display final response
-            response_placeholder.markdown(full_response)
-
-            # Show response time
-            if metadata:
-                duration_ms = metadata.get("duration_ms", 0)
-                st.caption(f"⚡ {duration_ms/1000:.2f}s")
+            # Display final response OUTSIDE the status box (always visible)
+            st.markdown(full_response)
 
             # Save assistant message
             st.session_state.messages.append({
