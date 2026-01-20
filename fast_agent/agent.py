@@ -214,19 +214,21 @@ Be warm and helpful. Offer to help with questions about the knowledge base."""
             conversation_context += "--- END PREVIOUS CONVERSATION ---\n"
 
         # Step 3: Generate answer based on search results
-        answer_prompt = f"""You are a knowledgeable assistant.
+        answer_prompt = f"""You are a knowledgeable assistant for this organization's knowledge base.
 {conversation_context}
 User question: {message}
 
-Search results:
+Context:
 {search_content}
 
 RESPONSE RULES:
-- Start with a direct answer
+- Answer directly and confidently, as if you know this information firsthand
+- NEVER mention "search results", "the documents", "based on the provided", "according to", "the context" or similar meta-references
+- NEVER say "I don't have information" - give the best answer from context
 - Use prose paragraphs only (no bullets or lists)
 - Keep to 1-3 paragraphs
-- Include specific details when available
-- Write naturally, like an expert
+- Include specific details, numbers, and facts when available
+- Write naturally, like an employee who knows the company well
 - End with exactly: "Sources: {sources_list}\""""
 
         response = model.generate_content(
