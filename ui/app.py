@@ -68,7 +68,7 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 if "api_url" not in st.session_state:
-    st.session_state.api_url = "http://localhost:8003"
+    st.session_state.api_url = "https://claude-code-dev.fly.dev"
 
 if "api_key" not in st.session_state:
     st.session_state.api_key = "your-api-key-for-authentication"
