@@ -20,20 +20,20 @@ load_dotenv("../../poc_agentic_rag/.env")
 class Config:
     """Minimal configuration for fast agent."""
 
-    # Required fields (no defaults)
-    anthropic_api_key: str
+    # Required for fast agent
     google_api_key: str
-    openrouter_api_key: str
     supabase_url: str
     supabase_key: str
-    neo4j_uri: str
-    neo4j_password: str
     openai_api_key: str
     api_key: str
 
     # Optional fields (with defaults)
-    claude_model: str = "claude-3-5-haiku-20241022"
+    anthropic_api_key: str = ""
+    openrouter_api_key: str = ""
+    neo4j_uri: str = ""
+    neo4j_password: str = ""
     neo4j_user: str = "neo4j"
+    claude_model: str = "claude-3-5-haiku-20241022"
     embedding_model: str = "text-embedding-3-large"
     embedding_dimensions: int = 1536
 
@@ -42,24 +42,25 @@ class Config:
 def get_config() -> Config:
     """Get cached config from environment."""
     return Config(
-        # Anthropic
-        anthropic_api_key=os.environ["ANTHROPIC_API_KEY"],
-        claude_model=os.getenv("CLAUDE_MODEL", "claude-sonnet-4-20250514"),
-        # Google
-        google_api_key=os.environ.get("GOOGLE_API_KEY", ""),
-        # OpenRouter
-        openrouter_api_key=os.environ.get("OPENROUTER_API_KEY", ""),
-        # Supabase
+        # Google (required for Gemini)
+        google_api_key=os.environ["GOOGLE_API_KEY"],
+        # Supabase (required for vector search)
         supabase_url=os.environ["SUPABASE_URL"],
         supabase_key=os.environ["SUPABASE_KEY"],
-        # Neo4j
-        neo4j_uri=os.environ["NEO4J_URI"],
-        neo4j_user=os.getenv("NEO4J_USER", "neo4j"),
-        neo4j_password=os.environ["NEO4J_PASSWORD"],
-        # OpenAI
+        # OpenAI (required for embeddings)
         openai_api_key=os.environ["OPENAI_API_KEY"],
+        # API authentication
+        api_key=os.environ["API_KEY"],
+        # Optional - Anthropic
+        anthropic_api_key=os.getenv("ANTHROPIC_API_KEY", ""),
+        claude_model=os.getenv("CLAUDE_MODEL", "claude-sonnet-4-20250514"),
+        # Optional - OpenRouter
+        openrouter_api_key=os.getenv("OPENROUTER_API_KEY", ""),
+        # Optional - Neo4j (for entity graph)
+        neo4j_uri=os.getenv("NEO4J_URI", ""),
+        neo4j_user=os.getenv("NEO4J_USER", "neo4j"),
+        neo4j_password=os.getenv("NEO4J_PASSWORD", ""),
+        # Embedding settings
         embedding_model=os.getenv("EMBEDDING_MODEL", "text-embedding-3-large"),
         embedding_dimensions=int(os.getenv("EMBEDDING_DIMENSIONS", "1536")),
-        # API
-        api_key=os.environ["API_KEY"],
     )

@@ -17,11 +17,14 @@ logger = logging.getLogger(__name__)
 _driver: Optional[Driver] = None
 
 
-def get_neo4j_driver() -> Driver:
-    """Get singleton Neo4j driver."""
+def get_neo4j_driver() -> Optional[Driver]:
+    """Get singleton Neo4j driver. Returns None if not configured."""
     global _driver
     if _driver is None:
         config = get_config()
+        if not config.neo4j_uri:
+            logger.warning("Neo4j not configured - entity graph disabled")
+            return None
         _driver = GraphDatabase.driver(
             config.neo4j_uri,
             auth=(config.neo4j_user, config.neo4j_password),
@@ -49,6 +52,9 @@ async def get_entities_fuzzy(
         List of entities with relationships
     """
     driver = get_neo4j_driver()
+    if driver is None:
+        logger.warning("Neo4j not available - returning empty results")
+        return []
 
     query = """
     MATCH (e:Entity)
