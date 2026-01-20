@@ -1,0 +1,26 @@
+# Fly.io configuration for fast-agent
+app = 'fast-agent'
+primary_region = 'gru'  # São Paulo, Brazil - closest to you
+
+[build]
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '512mb'
+  cpu_kind = 'shared'
+  cpus = 1
+
+[env]
+  # Non-sensitive environment variables
+  EMBEDDING_MODEL = "text-embedding-3-large"
+  EMBEDDING_DIMENSIONS = "1536"
+
+# Note: Secrets (API keys) must be set via CLI:
+# fly secrets set GOOGLE_API_KEY=xxx OPENAI_API_KEY=xxx SUPABASE_URL=xxx SUPABASE_KEY=xxx API_KEY=xxx
