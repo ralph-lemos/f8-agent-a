@@ -1,5 +1,5 @@
 # Fly.io configuration for fast-agent
-app = 'fast-agent'
+app = 'claude-code-dev'
 primary_region = 'gru'  # São Paulo, Brazil - closest to you
 
 [build]
