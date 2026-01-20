@@ -4,6 +4,7 @@ Streamlit Chat UI for Factor8 Fast Agent.
 Usage:
     streamlit run ui/app.py
 """
+import os
 import streamlit as st
 import httpx
 import json
@@ -22,7 +23,7 @@ if sys.platform == "win32":
 # ============================================================
 
 st.set_page_config(
-    page_title="Factor8 Agent",
+    page_title="Agent A",
     page_icon="⚡",
     layout="centered",
     initial_sidebar_state="collapsed"
@@ -66,16 +67,13 @@ if "api_url" not in st.session_state:
     st.session_state.api_url = "https://claude-code-dev.fly.dev"
 
 if "api_key" not in st.session_state:
-    st.session_state.api_key = ""
+    st.session_state.api_key = os.environ.get("API_KEY", "")
 
 if "org_id" not in st.session_state:
-    st.session_state.org_id = "00000000-0000-0000-0000-000000000001"
+    st.session_state.org_id = os.environ.get("ORG_ID", "00000000-0000-0000-0000-000000000001")
 
 if "session_id" not in st.session_state:
     st.session_state.session_id = None
-
-if "configured" not in st.session_state:
-    st.session_state.configured = False
 
 # ============================================================
 # API CLIENT
@@ -150,89 +148,72 @@ def run_async(coro):
 # MAIN CONTENT
 # ============================================================
 
-st.title("⚡ Factor8 Agent")
+st.title("⚡ Agent A")
+st.caption("Ask questions about your knowledge base")
 
-# Configuration section (only show if not configured)
-if not st.session_state.configured or not st.session_state.api_key:
-    st.caption("Enter your API key to start chatting")
+# Display chat history
+for msg in st.session_state.messages:
+    with st.chat_message(msg["role"]):
+        st.markdown(msg["content"])
 
-    api_key = st.text_input(
-        "API Key",
-        value=st.session_state.api_key,
-        type="password",
-        placeholder="Enter your API key"
-    )
+        # Show metrics for assistant messages
+        if msg["role"] == "assistant" and msg.get("metadata"):
+            metadata = msg["metadata"]
+            duration_ms = metadata.get("duration_ms", 0)
+            st.caption(f"⚡ {duration_ms/1000:.2f}s")
 
-    if api_key:
-        st.session_state.api_key = api_key
-        st.session_state.configured = True
-        st.rerun()
-else:
-    st.caption("Ask questions about your knowledge base")
+# Chat input
+if prompt := st.chat_input("Ask anything..."):
+    # Add user message
+    st.session_state.messages.append({"role": "user", "content": prompt})
 
-    # Display chat history
-    for msg in st.session_state.messages:
-        with st.chat_message(msg["role"]):
-            st.markdown(msg["content"])
+    # Display user message
+    with st.chat_message("user"):
+        st.markdown(prompt)
 
-            # Show metrics for assistant messages
-            if msg["role"] == "assistant" and msg.get("metadata"):
-                metadata = msg["metadata"]
-                duration_ms = metadata.get("duration_ms", 0)
-                st.caption(f"⚡ {duration_ms/1000:.2f}s")
-
-    # Chat input
-    if prompt := st.chat_input("Ask anything..."):
-        # Add user message
-        st.session_state.messages.append({"role": "user", "content": prompt})
-
-        # Display user message
-        with st.chat_message("user"):
-            st.markdown(prompt)
-
-        # Stream assistant response
-        with st.chat_message("assistant"):
-            # Status box for streaming updates only
-            with st.status("Thinking...", expanded=True) as status:
-                try:
-                    async def collect_response():
-                        full_response = ""
-                        metadata = {}
-
-                        async for chunk in stream_chat(prompt):
-                            if chunk["type"] == "status":
-                                status.update(label=chunk.get("detail", "Processing..."))
-
-                            elif chunk["type"] == "answer":
-                                full_response = chunk["content"]
-                                metadata = chunk.get("metadata", {})
-
-                            elif chunk["type"] == "error":
-                                full_response = f"Error: {chunk['content']}"
-
-                        return full_response, metadata
-
-                    full_response, metadata = run_async(collect_response())
-
-                    # Update status to complete and collapse
-                    duration_ms = metadata.get("duration_ms", 0)
-                    status.update(
-                        label=f"⚡ {duration_ms/1000:.2f}s",
-                        state="complete",
-                        expanded=False
-                    )
-
-                except Exception as e:
-                    status.update(label=f"Error: {str(e)}", state="error")
-                    full_response = f"Error: {str(e)}"
+    # Stream assistant response
+    with st.chat_message("assistant"):
+        # Status box for streaming updates only
+        with st.status("Thinking...", expanded=True) as status:
+            try:
+                async def collect_response():
+                    full_response = ""
                     metadata = {}
 
-            # Display final response OUTSIDE the status box (always visible)
-            st.markdown(full_response)
+                    async for chunk in stream_chat(prompt):
+                        if chunk["type"] == "status":
+                            status.update(label=chunk.get("detail", "Processing..."))
 
-            # Save assistant message
-            st.session_state.messages.append({
-                "role": "assistant",
-                "content": full_response,
-                "metadata": metadata
-            })
+                        elif chunk["type"] == "answer":
+                            full_response = chunk["content"]
+                            metadata = chunk.get("metadata", {})
+
+                        elif chunk["type"] == "error":
+                            full_response = f"Error: {chunk['content']}"
+
+                    return full_response, metadata
+
+                full_response, metadata = run_async(collect_response())
+
+                # Update status to complete and collapse
+                duration_ms = metadata.get("duration_ms", 0)
+                status.update(
+                    label=f"⚡ {duration_ms/1000:.2f}s",
+                    state="complete",
+                    expanded=False
+                )
+
+            except Exception as e:
+                status.update(label=f"Error: {str(e)}", state="error")
+                full_response = f"Error: {str(e)}"
+                metadata = {}
+
+        # Display final response OUTSIDE the status box (always visible)
+        st.markdown(full_response)
+
+        # Save assistant message
+        st.session_state.messages.append({
+            "role": "assistant",
+            "content": full_response,
+            "metadata": metadata
+        })
