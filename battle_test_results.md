@@ -1,6 +1,6 @@
 # Agent A Battle Test Results
 
-**Date:** 2026-01-20 18:40:59
+**Date:** 2026-01-20 19:19:10
 **API:** https://claude-code-dev.fly.dev
 **Total Queries:** 23
 **Successful:** 23/23
@@ -9,9 +9,9 @@
 
 | Metric | Value |
 |--------|-------|
-| Average Response Time | 4733ms |
-| Fastest | 548ms |
-| Slowest | 38685ms |
+| Average Response Time | 1965ms |
+| Fastest | 606ms |
+| Slowest | 3761ms |
 | Success Rate | 100% |
 
 ---
@@ -22,13 +22,15 @@
 
 #### 1. What does Lean Labs do?
 
-**Status:** ✅ | **Time:** 3244ms
+**Status:** ✅ | **Time:** 3158ms
 
 **Response:**
 
-Lean Labs is an AI growth marketing agency that partners with SaaS and tech brands to build effective marketing systems that drive predictable, profitable customer acquisition. They focus on fixing the fundamentals first, addressing issues like website conversion, messaging clarity, and full-funnel journey architecture before scaling acquisition efforts. Companies typically engage Lean Labs when their current marketing isn't delivering results, leading to inconsistent pipelines, high customer acquisition costs, or a lack of meaningful outcomes from previous agency efforts.
+Lean Labs is an AI growth marketing agency that helps SaaS and tech brands improve their marketing effectiveness by focusing on fundamental growth systems. They work with companies to fix issues like website conversion, customer acquisition, messaging clarity, and pipeline inconsistency. Lean Labs builds growth engines by addressing the underlying systems first, rather than focusing on one-off tactics.
 
-The agency's approach is sequenced and evidence-based, prioritizing messaging that aligns with buyers, websites built for conversion, and clean, accurate attribution. They operate as a lean, specialized growth team, acting as an extension of their clients' companies. Lean Labs helps businesses cut through the noise by providing clarity, strategy, and a focus on fundamental marketing elements to create more efficient spend and stronger performance.
+Their approach involves a sequenced framework that prioritizes messaging alignment with buyers, conversion-focused websites, accurate attribution, and improving the overall marketing system. They help companies cut through noise by focusing on clarity, strategy, and evidence-based improvements, operating as a lean, specialized growth team that functions as an extension of their clients' companies.
+
+Lean Labs also offers a diagnostic tool called the Lean Labs Growth Grader, which detects marketing funnel leaks and enhances conversion paths to provide measurable growth insights for startups. They are a HubSpot Diamond Partner specializing in AI-driven marketing, SaaS website development, and strategic growth services aimed at improving ROI and scaling businesses.
 
 Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Success, Leanlabs Websites, Leanlabs Lead Generation Website, Leanlabs Hubspotters
 
@@ -36,15 +38,15 @@ Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Success, 
 
 #### 2. What services does Lean Labs offer?
 
-**Status:** ✅ | **Time:** 2321ms
+**Status:** ✅ | **Time:** 2369ms
 
 **Response:**
 
-Lean Labs is an AI growth marketing agency that helps SaaS and tech brands achieve predictable, profitable customer acquisition. They focus on building robust growth systems by first addressing fundamental marketing elements. This includes clarifying messaging to align with buyers, architecting full-funnel journeys, and creating conversion-focused website experiences. Companies typically engage Lean Labs when their marketing efforts are not yielding desired results, such as low website conversion rates, inconsistent pipelines, or high customer acquisition costs.
+Lean Labs is an AI Growth Marketing Agency that helps SaaS and tech brands improve their marketing effectiveness by focusing on fundamental growth systems. They specialize in building predictable, profitable customer acquisition by strengthening messaging, improving website conversion, and creating full-funnel journey architecture. Companies engage Lean Labs when their marketing is not producing desired results, such as inconsistent pipelines, high customer acquisition costs, or when previous agencies have not delivered meaningful outcomes.
 
-Their approach is sequenced, prioritizing messaging clarity, buyer-aligned funnels, accurate attribution, and conversion improvements before scaling acquisition efforts. Lean Labs acts as an extension of your team, offering transparency, honesty, and direct collaboration. They are known for their ability to diagnose marketing challenges, repair underlying systems, and build growth engines that work in the right order, leading to more efficient spend, stronger performance, and predictable pipeline growth.
+Lean Labs offers services that focus on building growth systems through a sequenced approach, prioritizing messaging clarity, buyer-aligned funnels, accurate attribution, and conversion improvements before scaling acquisition efforts. They help clients cut through noise by focusing on clarity, strategy, and evidence-based improvements, including messaging that aligns with buyers, websites built for conversion, experiments that drive meaningful outcomes, and clean, accurate attribution. They also provide a lean, specialized growth team that operates as an extension of the client's company.
 
-Lean Labs also specializes in website redesign and development, particularly for B2B SaaS companies. They have a proven track record of delivering measurable results, improving website professionalism and efficiency, and enhancing lead generation. Their expertise extends to HubSpot, where they are recognized as a top partner for developing websites within the HubSpot COS.
+Lean Labs also provides website development and redesign services, aiming to make sites professional, efficient, and business-generating. They are a HubSpot Diamond Partner specializing in AI-driven marketing, SaaS website development, HubSpot support, and strategic growth services to improve ROI and scale SaaS and tech companies. Their approach is data-driven and outcome-focused, aiming to drive predictable revenue and CAC-efficient scaling.
 
 Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Success, Leanlabs Lead Generation Website, Leanlabs Websites, Leanlabs Hubspotters
 
@@ -52,15 +54,11 @@ Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Success, 
 
 #### 3. Who is Lean Labs' target audience?
 
-**Status:** ✅ | **Time:** 12217ms
+**Status:** ✅ | **Time:** 1686ms
 
 **Response:**
 
-Lean Labs primarily targets B2B SaaS companies that have already achieved significant traction, specifically those with over $5 million in revenue. These companies often find themselves plateauing, experiencing inefficiencies in their marketing efforts, or underperforming against their growth benchmarks. They are typically looking for a partner to help them improve their marketing performance across key areas such as messaging, positioning, funnel optimization, and conversion systems.
-
-Companies turn to Lean Labs when their current marketing strategies aren't yielding the desired results. This can manifest as websites that fail to convert visitors, inconsistent sales pipelines, excessively high customer acquisition costs, or a history of unsatisfactory outcomes with previous agencies. They need a specialized growth team that can diagnose systemic issues, implement fundamental fixes, and build a predictable, profitable growth engine.
-
-Lean Labs focuses on building robust growth systems by prioritizing foundational marketing elements before scaling acquisition efforts. Their ideal clients understand the importance of a sequenced approach that addresses messaging clarity, buyer-aligned funnels, accurate attribution, and conversion improvements to create more efficient spending and stronger, predictable pipeline generation.
+Lean Labs' target audience consists of B2B SaaS companies that have achieved over $5 million in revenue but are experiencing stagnation, inefficiency, or underperformance relative to their growth benchmarks. These companies often find that their marketing is not producing the desired results, with issues such as low website conversion rates, inconsistent pipelines, high customer acquisition costs, or a lack of meaningful outcomes from previous agency efforts. They are looking for a partner to diagnose and repair their underlying growth systems to build a predictable and profitable customer acquisition engine.
 
 Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Websites, Leanlabs Hubspotters, Leanlabs Lead Generation Website, Leanlabs Success
 
@@ -70,13 +68,11 @@ Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Websites,
 
 #### 4. What is Lean Labs' pricing?
 
-**Status:** ✅ | **Time:** 2120ms
+**Status:** ✅ | **Time:** 1265ms
 
 **Response:**
 
-Lean Labs offers a range of programs and pricing designed to help SaaS and tech brands achieve predictable growth. While specific package details are not publicly listed, the company emphasizes a sequenced approach to marketing that prioritizes fundamentals like messaging clarity, website conversion, and attribution before scaling acquisition efforts. They work with companies that are struggling to see results from their current marketing strategies, whether it's due to low website conversion rates, inconsistent pipelines, or high customer acquisition costs.
-
-To understand how much it costs to work with Lean Labs and to explore their specific programs, you can visit their pricing page directly. They encourage potential clients to connect with their team to discuss their unique challenges and chart a personalized growth path. This initial conversation is designed to provide clarity on what's working, what isn't, and the most impactful next steps for your business.
+To find out how much it costs to work with Lean Labs, you can visit their pricing page. The organization offers programs and pricing information that can be viewed by following the link provided.
 
 Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Websites, HYBRID GROWTH TEAM, Leanlabs Hubspotters, Leanlabs Success
 
@@ -84,13 +80,11 @@ Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Websites,
 
 #### 5. How much does Lean Labs charge per month?
 
-**Status:** ✅ | **Time:** 1677ms
+**Status:** ✅ | **Time:** 1488ms
 
 **Response:**
 
-Lean Labs offers various programs designed to help businesses achieve predictable growth through a sequenced approach to marketing. Our services start at $2,000 per month, providing a foundational investment for improving marketing effectiveness. We focus on building robust growth systems by first addressing core elements like messaging clarity, website conversion, and customer acquisition before scaling efforts.
-
-We invite potential clients to connect with us to discuss their specific needs and explore how our programs can be tailored to chart their growth path. You can find more details about our pricing and available programs on our website.
+Lean Labs offers various programs and services that start at $2,000 per month. To find out the specific costs for working with them, you can explore their programs and pricing details.
 
 Sources: Lean Labs, All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Blog: Growth Marketing Metrics, Leanlabs Websites
 
@@ -98,15 +92,13 @@ Sources: Lean Labs, All About Lean Labs | An AI Growth Marketing Agency, Leanlab
 
 #### 6. What results have Lean Labs clients achieved?
 
-**Status:** ✅ | **Time:** 2299ms
+**Status:** ✅ | **Time:** 1809ms
 
 **Response:**
 
-Lean Labs clients achieve significant and measurable results, consistently dominating their markets. One notable success story is Qualio, which experienced over 740% organic growth with substantial quarter-over-quarter increases, even raising $11 million in funding. Another client reported their organic search traffic tripling, with a tenfold increase in blog post page views and a tripling of new leads. Clients also praise Lean Labs for transforming their websites into professional and efficient platforms that drive more business, with some seeing their Google placements move from non-existent to consistently within the Top 5.
+Lean Labs clients have achieved significant growth and positive results. For example, one client experienced over 740% organic growth with substantial quarter-over-quarter increases, leading to raising $11 million in funding. Another client saw their organic search traffic triple, with a tenfold increase in blog post page views and a tripling of new leads. Clients have also reported that their websites have become more professional and efficient, bringing in more business.
 
-Clients frequently highlight the tangible impact on their website performance and lead generation. For instance, one CEO shared that their organic search traffic tripled, their blog post views increased tenfold, and new leads tripled. The collaborative approach of Lean Labs is often cited, with clients viewing them as an extension of their own team, fostering a true partnership. This collaborative spirit, combined with a deep understanding of B2B and SaaS marketing, leads to exceptional outcomes and high client satisfaction.
-
-The positive experiences extend to website development and redesign projects, where Lean Labs is recognized for delivering concrete, measurable results that surpass expectations. Clients appreciate the responsiveness and value added by the entire Lean Labs team at every stage of a project, leading to impressive outcomes and a strong sense of accomplishment.
+Furthermore, Lean Labs clients have seen their Google placements improve from non-existent to consistently within the Top 5. Many clients describe their experience with Lean Labs as a collaborative partnership, with the team being responsive and adding immense value at every stage. The results achieved have often surpassed original expectations, with clients highlighting concrete and measurable improvements.
 
 Sources: Lean Labs, Leanlabs Success, Leanlabs Websites, Leanlabs Hubspotters, Leanlabs Lead Generation Website
 
@@ -114,13 +106,11 @@ Sources: Lean Labs, Leanlabs Success, Leanlabs Websites, Leanlabs Hubspotters, L
 
 #### 7. How long does Lean Labs onboarding take?
 
-**Status:** ✅ | **Time:** 1880ms
+**Status:** ✅ | **Time:** 1680ms
 
 **Response:**
 
-Lean Labs' onboarding process is designed to be a collaborative and insightful journey, rather than a lengthy, rigid timeline. It begins with a simple conversation to understand your specific marketing struggles and identify opportunities for improvement. This initial discussion focuses on providing clarity about what's currently working, what isn't, and what steps are needed to achieve predictable growth.
-
-Following this initial conversation, Lean Labs employs a sequenced approach to evaluate your marketing fundamentals. This evaluation typically includes your messaging, website performance, funnel, and overall marketing system structure. The goal is to pinpoint the most critical areas for improvement and determine the most impactful steps to take, in the right order, to build a smarter path forward. The emphasis is on understanding the root causes of stalled growth and developing a clear, evidence-based plan.
+The provided information does not specify the exact duration of Lean Labs' onboarding process. However, it emphasizes their sequenced approach to evaluating fundamentals such as messaging, website performance, funnel, and overall marketing system structure to identify and address marketing challenges for predictable growth. The initial step involves a conversation to understand your marketing struggles and opportunities.
 
 Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Success, Leanlabs Lead Generation Website, Leanlabs Websites, Leanlabs Hubspotters
 
@@ -130,13 +120,15 @@ Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Success, 
 
 #### 8. What's the difference between Lean Labs plans?
 
-**Status:** ✅ | **Time:** 2383ms
+**Status:** ✅ | **Time:** 2670ms
 
 **Response:**
 
-Lean Labs doesn't offer pre-defined, one-size-fits-all plans. Instead, we focus on building custom growth systems tailored to each client's unique needs and challenges. Our approach is deeply rooted in a sequenced framework that prioritizes fundamental marketing elements before scaling. This means we first focus on ensuring your messaging is clear and aligned with your buyers, your funnels are optimized for conversion, your attribution is accurate, and your website is built for performance. Only after these foundational elements are strong do we move to scaling acquisition efforts.
+Lean Labs focuses on building growth systems through a sequenced approach that prioritizes fundamental marketing elements before scaling efforts. Their methodology involves clarifying messaging, building buyer-aligned funnels, ensuring accurate attribution, and improving conversions before expanding acquisition strategies. This sequenced framework is designed to address issues like websites that don't convert, inconsistent pipelines, and high customer acquisition costs, ultimately creating more efficient spend, stronger performance, and predictable pipeline for SaaS and tech companies.
 
-This sequenced approach is crucial because many marketing efforts fail when companies try to grow without a solid underlying system. By fixing the fundamentals first, we create more efficient spend, stronger performance, and predictable pipeline growth. When companies engage with Lean Labs, the initial step is a conversation to understand their specific struggles and opportunities. We then provide clarity on what's working, what isn't, and what steps are necessary to achieve predictable growth, always focusing on the real causes of stalled growth and building a smarter path forward.
+Lean Labs helps companies cut through marketing noise by focusing on clarity, strategy, and evidence-based improvements. They work on messaging that resonates with buyers, websites optimized for conversion, experiments that yield meaningful outcomes, and clean, accurate attribution. Their approach is to act as a lean, specialized growth team that integrates with your company, diagnosing what's broken, repairing the underlying system, and building a growth engine that operates in the correct order based on fundamentals.
+
+The initial step to engaging with Lean Labs involves a conversation to understand your marketing challenges and identify opportunities for improvement. They provide clarity on what is working, what isn't, and the necessary next steps for predictable growth. Lean Labs evaluates fundamentals such as messaging, website performance, funnel, and overall marketing system structure to pinpoint what needs to be fixed first and which steps will have the biggest impact.
 
 Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Websites, Leanlabs Hubspotters, Leanlabs Success, Leanlabs Lead Generation Website
 
@@ -144,13 +136,15 @@ Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Websites,
 
 #### 9. How is Lean Labs different from other agencies?
 
-**Status:** ✅ | **Time:** 1839ms
+**Status:** ✅ | **Time:** 2286ms
 
 **Response:**
 
-Lean Labs distinguishes itself from other agencies by focusing on building fundamental growth systems rather than offering one-off tactics. We help SaaS and tech brands improve their marketing effectiveness by first addressing core issues like website conversion, messaging clarity, and customer acquisition. Our approach is a proven, sequenced framework that prioritizes these fundamentals before scaling efforts, ensuring more efficient spend, stronger performance, and predictable pipeline. Companies often come to us when their marketing isn't producing results, their websites don't convert, or previous agencies have failed to deliver meaningful outcomes.
+Lean Labs differentiates itself from other agencies by focusing on building fundamental growth systems rather than executing one-off tactics. They employ a sequenced approach that prioritizes messaging clarity, buyer-aligned funnels, accurate attribution, and conversion improvements before scaling acquisition efforts. This methodology ensures that marketing spend is more efficient, performance is stronger, and pipeline is predictable, addressing issues like websites that don't convert or consistently high customer acquisition costs.
 
-Unlike agencies that focus on short-term activities, Lean Labs builds marketing systems designed for long-term performance. We strengthen the foundation first, focusing on messaging that aligns with buyers, websites built for conversion, accurate attribution, and experiments that drive meaningful outcomes. This creates a unified growth system where actions build on each other, reducing wasted effort and making marketing more efficient and predictable over time. We operate as a lean, specialized growth team that functions as an extension of your company, committed to a '10x' philosophy to reach your goals.
+Companies often turn to Lean Labs when their current marketing efforts are not yielding results, and they need a partner who can diagnose underlying problems, repair systems, and build a sustainable growth engine. Lean Labs emphasizes clarity, strategy, and evidence-based improvements, focusing on messaging that resonates with buyers, websites optimized for conversion, experiments that drive meaningful outcomes, and clean, accurate attribution. They operate as a lean, specialized growth team that integrates with your company.
+
+Unlike agencies that may focus on short-term activities, Lean Labs builds marketing systems designed for long-term performance by strengthening foundational elements such as messaging, website clarity, tracking, and conversion paths. This creates a unified growth system where actions build upon each other, reducing wasted effort and making marketing more efficient and predictable over time. Clients have noted that Lean Labs "walks the walk" and delivers real, concrete, measurable results that surpass expectations.
 
 Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Hubspotters, Leanlabs Websites, Leanlabs Success, Leanlabs Lead Generation Website
 
@@ -158,13 +152,13 @@ Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Hubspotte
 
 #### 10. What makes Lean Labs' approach unique?
 
-**Status:** ✅ | **Time:** 1813ms
+**Status:** ✅ | **Time:** 2533ms
 
 **Response:**
 
-Lean Labs' approach is unique because we focus on building fundamental growth systems for SaaS and tech brands rather than just executing isolated tactics. We start by diagnosing and fixing the underlying issues that hinder marketing effectiveness, such as poor website conversion, inconsistent pipelines, or high customer acquisition costs. Our process is sequenced, prioritizing core elements like clear positioning, buyer-aligned messaging, and conversion-focused website experiences before scaling acquisition efforts. This ensures that our clients have a solid foundation for predictable and profitable growth.
+Lean Labs' approach is unique because they focus on building fundamental growth systems for SaaS and tech brands, rather than just implementing tactics. They address core issues like website conversion and customer acquisition by prioritizing clear positioning, buyer-aligned messaging, full-funnel journey architecture, and conversion-focused website experiences. Companies often turn to Lean Labs when their marketing isn't yielding results, their websites aren't converting, pipelines are inconsistent, or customer acquisition costs are too high. Lean Labs acts as a partner to diagnose these underlying system issues and build a growth engine that works in the correct order, based on fundamentals.
 
-We differentiate ourselves by acting as an extension of our clients' teams, fostering a collaborative and transparent partnership. Companies come to us when their marketing isn't delivering results, and they need a strategic partner who can repair their marketing system and build a growth engine that works in the right order. We provide clarity on what's working, what isn't, and what needs to happen next to create a smarter path forward, replacing guesswork with a clear, evidence-based plan.
+This sequenced approach involves evaluating messaging, website performance, funnel architecture, and overall marketing system structure to identify what needs to be fixed first for the biggest impact. They help companies cut through the noise by focusing on clarity, strategy, and evidence-based improvements, ensuring more efficient spend, stronger performance, and predictable pipeline. Lean Labs also operates as an extension of their clients' teams, fostering a collaborative partnership.
 
 Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Success, Leanlabs Websites, Leanlabs Hubspotters, Leanlabs Lead Generation Website
 
@@ -174,27 +168,29 @@ Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Success, 
 
 #### 11. How do I get started with Lean Labs?
 
-**Status:** ✅ | **Time:** 1961ms
+**Status:** ✅ | **Time:** 3761ms
 
 **Response:**
 
-Getting started with Lean Labs is a straightforward process designed to bring clarity to your marketing challenges and pave the way for predictable growth. The initial step involves a simple conversation where we aim to understand your current marketing struggles and identify opportunities for improvement. Instead of a sales pitch, we provide you with a clear assessment of what's working, what isn't, and the strategic steps needed to foster more predictable growth.
+To get started with Lean Labs, the first step is to schedule a conversation. This initial discussion is designed to understand your specific marketing challenges and identify opportunities for improvement, rather than being a sales pitch. Lean Labs will provide clarity on what's currently working, what isn't, and what steps should be taken next to foster predictable growth.
 
-Our approach is a sequenced evaluation of your marketing fundamentals, including your messaging, website performance, funnel, and overall marketing system structure. This allows us to pinpoint the most critical areas for improvement and determine the steps that will yield the biggest impact, in the correct order. We focus on uncovering the root causes of stalled growth and building a smarter, evidence-based path forward. To begin this journey and replace guesswork with a clear plan, you can connect with Lean Labs directly.
+Lean Labs employs a sequenced approach to evaluate fundamental aspects of your marketing, including your messaging, website performance, funnel, and overall marketing system structure. This evaluation helps pinpoint the most critical areas for improvement and outlines the steps that will yield the biggest impact in the correct order. The goal is to move beyond guesswork and establish a clear plan for growth.
 
-Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Success, Leanlabs Hubspotters, Leanlabs Websites
+Your next step is to connect with Lean Labs to begin this journey. Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Success, Leanlabs Hubspotters, Leanlabs Websites
 
 ---
 
 #### 12. What is Lean Labs' methodology?
 
-**Status:** ✅ | **Time:** 2081ms
+**Status:** ✅ | **Time:** 2696ms
 
 **Response:**
 
-Lean Labs employs a proven, sequenced methodology focused on building fundamental growth systems for SaaS and tech brands. We prioritize fixing the underlying marketing infrastructure before scaling efforts, addressing issues like website conversion, messaging clarity, and customer acquisition. Our approach begins with a clear understanding of your challenges and opportunities, followed by an evaluation of your messaging, website performance, funnel architecture, and overall marketing system. This ensures we identify and address what needs to be fixed first to create the biggest impact in the right order, leading to predictable and profitable growth.
+Lean Labs employs a proven, sequenced approach to marketing that prioritizes fixing fundamental growth systems before scaling efforts. This methodology focuses on building robust systems that improve website performance, strengthen messaging, and create predictable, profitable customer acquisition. They address issues such as website conversion, customer acquisition, inconsistent pipelines, and high customer acquisition costs by diagnosing what's broken, repairing the underlying system, and building a growth engine that operates in the correct order, based on fundamentals rather than just tactics.
 
-Our methodology centers on creating clarity, strategy, and evidence-based improvements. We focus on developing messaging that truly aligns with your buyers, building websites optimized for conversion, implementing experiments that drive meaningful outcomes, and ensuring clean, accurate attribution. We operate as a lean, specialized growth team, acting as an extension of your company to refine your marketing approach and provide a clear path to achieving your growth goals.
+Their approach involves a sequenced framework that prioritizes messaging clarity, buyer-aligned funnels, accurate attribution, and conversion improvements. This focus on fundamentals ensures more efficient spend, stronger performance, and predictable pipeline. Lean Labs helps companies cut through the noise by concentrating on clarity, strategy, and evidence-based improvements, with a focus on messaging that aligns with buyers, websites built for conversion, experiments that drive meaningful outcomes, and clean, accurate attribution. They also provide a lean, specialized growth team that operates as an extension of the client's company.
+
+The process begins with a conversation to understand marketing struggles and opportunities. Lean Labs then uses a sequenced approach to evaluate fundamentals like messaging, website performance, funnel, and overall marketing system structure. This identifies what needs to be fixed first and which steps will create the biggest impact in the right order, building a smarter path forward for predictable growth.
 
 Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Success, Leanlabs Websites, Leanlabs Hubspotters, Leanlabs Lead Generation Website
 
@@ -202,13 +198,13 @@ Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Success, 
 
 #### 13. What happens after I sign up with Lean Labs?
 
-**Status:** ✅ | **Time:** 2228ms
+**Status:** ✅ | **Time:** 2149ms
 
 **Response:**
 
-After you sign up with Lean Labs, the first step is a simple conversation. This initial discussion is designed to understand your current marketing challenges and identify opportunities for improvement. Instead of a sales pitch, you'll gain clarity on what's working, what isn't, and what steps are needed to achieve more predictable growth. Lean Labs then employs a sequenced approach to evaluate your marketing fundamentals, including your messaging, website performance, funnel, and overall marketing system structure. This evaluation pinpoints the most critical areas for immediate attention and outlines the steps that will yield the biggest impact in the correct order, focusing on the root causes of stalled growth.
+After you sign up with Lean Labs, the process begins with a conversation to understand your marketing challenges and identify opportunities for improvement. Lean Labs focuses on providing clarity on what's working, what isn't, and the necessary next steps to achieve predictable growth. They employ a sequenced approach to evaluate fundamental aspects of your marketing, including your messaging, website performance, funnel, and overall marketing system structure. This evaluation helps pinpoint what needs to be fixed first and which actions will yield the most significant impact in the correct order, aiming to address the root causes of stalled growth and establish a more effective path forward.
 
-Lean Labs' process is built around establishing robust growth systems rather than relying on one-off tactics. They prioritize foundational elements such as messaging clarity, buyer-aligned funnels, accurate attribution, and conversion improvements before scaling acquisition efforts. This sequencing is crucial because many marketing initiatives fail when companies attempt to grow without addressing underlying systemic issues. By fixing these fundamentals first, Lean Labs ensures more efficient spending, stronger performance, and a predictable pipeline. They help companies cut through the noise by focusing on clarity, strategy, and evidence-based improvements, acting as an extension of your team to build a growth engine that works effectively.
+Lean Labs helps SaaS and tech brands grow by building growth systems rather than relying on one-off tactics. Their sequenced framework prioritizes fundamental elements such as messaging clarity, buyer-aligned funnels, accurate attribution, and conversion improvements before scaling acquisition efforts. This approach is crucial because many marketing initiatives fail when companies attempt to grow without addressing underlying system issues. By fixing these fundamentals first, Lean Labs creates more efficient spending, stronger performance, and a predictable pipeline. They assist companies in cutting through the noise by focusing on clarity, strategy, and evidence-based improvements, working on messaging that resonates with buyers, websites optimized for conversion, experiments that drive meaningful outcomes, and clean, accurate attribution.
 
 Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Success, Leanlabs Lead Generation Website, Leanlabs Hubspotters, Leanlabs Websites
 
@@ -218,11 +214,11 @@ Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Success, 
 
 #### 14. Does Lean Labs offer refunds?
 
-**Status:** ✅ | **Time:** 5907ms
+**Status:** ✅ | **Time:** 1651ms
 
 **Response:**
 
-Lean Labs is committed to delivering tangible results and building strong partnerships with our clients. While our focus is on creating predictable growth and ensuring client success through our proven, sequenced approach, the specifics of our refund policy are not detailed in the provided information. Our aim is always to diagnose issues, repair underlying systems, and build a growth engine that works, ensuring our clients see meaningful outcomes from our collaboration.
+The provided context does not contain information about whether Lean Labs offers refunds. The available information focuses on Lean Labs' services, their approach to growth marketing, and client testimonials highlighting positive outcomes and experiences.
 
 Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Websites, Leanlabs Hubspotters, Leanlabs Lead Generation Website, Leanlabs Success
 
@@ -230,11 +226,11 @@ Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Websites,
 
 #### 15. What is Lean Labs' phone number?
 
-**Status:** ✅ | **Time:** 1323ms
+**Status:** ✅ | **Time:** 1543ms
 
 **Response:**
 
-To connect with Lean Labs, the best way to get started is by initiating a conversation. You can begin your journey by visiting their website and clicking on the "Connect with Lean Labs" link. This will allow you to discuss your marketing challenges and explore opportunities for improvement with their team.
+To get started with Lean Labs, you can initiate a conversation to discuss your marketing challenges and potential growth opportunities. Lean Labs focuses on a sequenced approach to evaluate your messaging, website performance, funnel, and overall marketing system structure to identify areas for improvement and build a more predictable growth engine.
 
 Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Websites, Leanlabs Hubspotters, Leanlabs Lead Generation Website, Leanlabs Success
 
@@ -242,14 +238,11 @@ Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Websites,
 
 #### 16. Tell me about quantum computing
 
-**Status:** ✅ | **Time:** 4372ms
+**Status:** ✅ | **Time:** 1393ms
 
 **Response:**
 
-Quantum computing represents a revolutionary paradigm shift in computation, leveraging the principles of quantum mechanics to solve problems that are intractable for even the most powerful classical supercomputers. Unlike classical bits that represent either a 0 or a 1, quantum bits, or qubits, can exist in a superposition of both states simultaneously. This allows quantum computers to explore a vast number of possibilities concurrently, leading to exponential speedups for certain types of calculations. Furthermore, quantum phenomena like entanglement, where qubits become intrinsically linked regardless of distance, enable complex correlations that are impossible to replicate classically.
-
-The potential applications of quantum computing are far-reaching and transformative. In drug discovery and materials science, quantum simulations can accurately model molecular interactions, accelerating the development of new pharmaceuticals and advanced materials. For financial modeling, quantum algorithms could optimize portfolios and detect fraud with unprecedented efficiency. Cryptography is another area poised for disruption, with quantum computers capable of breaking current encryption methods, necessitating the development of quantum-resistant algorithms. While still in its nascent stages, the field is rapidly advancing, with companies and research institutions investing heavily in developing stable and scalable quantum hardware and software.
-
+I can only answer questions about our knowledge base. This topic isn't covered in our documentation. Is there something else I can help you with?
 Sources: Unknown
 
 ---
@@ -258,15 +251,13 @@ Sources: Unknown
 
 #### 17. Is Lean Labs worth it?
 
-**Status:** ✅ | **Time:** 38685ms
+**Status:** ✅ | **Time:** 2158ms
 
 **Response:**
 
-Lean Labs is definitely worth it for SaaS and tech brands looking to achieve predictable, profitable growth. Companies often turn to Lean Labs when their current marketing efforts aren't yielding the desired results, whether it's low website conversion rates, inconsistent pipelines, or high customer acquisition costs. Lean Labs excels at diagnosing these fundamental issues and repairing the underlying marketing systems before scaling efforts. Their sequenced approach prioritizes messaging clarity, buyer-aligned funnels, accurate attribution, and conversion improvements, ensuring that marketing spend is more efficient and performance is stronger.
+Lean Labs is an AI growth marketing agency that helps SaaS and tech brands improve their marketing effectiveness by focusing on fundamental growth systems. They address issues such as website conversion, customer acquisition, messaging clarity, and pipeline inconsistency. Companies often turn to Lean Labs when their current marketing efforts are not yielding desired results, their websites are not converting effectively, or their customer acquisition costs are too high. Lean Labs aims to diagnose underlying issues, repair marketing systems, and build a growth engine that operates in the correct order, based on foundational principles rather than just tactics.
 
-Clients consistently highlight the positive impact Lean Labs has had on their marketing strategies and website experiences. They appreciate the agency's focus on building growth systems rather than just implementing one-off tactics. Lean Labs is known for its clarity, strategy, and evidence-based improvements, creating websites built for conversion and driving meaningful outcomes through focused experiments. Many clients view Lean Labs as an extension of their own team, praising their transparency, honesty, and collaborative partnership.
-
-Ultimately, Lean Labs provides a clear, strategic path to growth by fixing the fundamentals first. They help companies cut through the noise and build a robust growth engine that delivers consistent results.
+Clients choose Lean Labs because they build growth systems rather than one-off tactics, following a sequenced framework that prioritizes fundamentals like messaging clarity, buyer-aligned funnels, accurate attribution, and conversion improvements before scaling acquisition efforts. This approach is designed to create more efficient spending, stronger performance, and predictable pipeline. Lean Labs focuses on clarity, strategy, and evidence-based improvements, offering a lean, specialized growth team that operates as an extension of the client's company. Testimonials highlight their ability to refine marketing approaches, provide clear paths for growth, and build the best possible website experiences, leading to increased business and a more professional and efficient online presence.
 
 Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Websites, Leanlabs Hubspotters, Leanlabs Success, Leanlabs Lead Generation Website
 
@@ -274,13 +265,13 @@ Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Websites,
 
 #### 18. What does Lean Labs do for SEO?
 
-**Status:** ✅ | **Time:** 2833ms
+**Status:** ✅ | **Time:** 1999ms
 
 **Response:**
 
-Lean Labs focuses on building robust growth systems for SaaS and tech brands, which inherently includes SEO as a fundamental component of driving predictable customer acquisition. While not explicitly detailing a separate "SEO service," their approach emphasizes strengthening the underlying marketing infrastructure that directly impacts search visibility and performance. This involves optimizing websites for conversion, ensuring clear and buyer-aligned messaging, and establishing accurate attribution. By fixing these fundamentals first, Lean Labs creates a more efficient and effective marketing engine, which naturally leads to improved organic search performance as a result of a better user experience, stronger on-page signals, and a more authoritative online presence.
+Lean Labs focuses on building growth systems for SaaS and tech brands by fixing fundamental marketing elements first. Their approach prioritizes messaging clarity, buyer-aligned funnels, accurate attribution, and conversion improvements before scaling acquisition efforts. They help companies improve website performance, strengthen messaging, and create predictable, profitable customer acquisition by focusing on clear positioning, buyer-aligned messaging, full-funnel journey architecture, and conversion-focused website experiences. Lean Labs works with companies when their marketing isn't producing results, their websites don't convert, pipelines are inconsistent, or customer acquisition costs are too high.
 
-Their methodology prioritizes a sequenced approach, starting with messaging clarity, buyer-aligned funnels, and conversion improvements before scaling acquisition efforts. This means that SEO benefits are realized through a holistic strategy that ensures a website is not only discoverable but also highly effective at converting visitors into leads and customers. Clients come to Lean Labs when their marketing isn't producing results, and by diagnosing and repairing the underlying system, they build a growth engine that works in the right order, leading to more efficient spend and stronger performance, which includes organic search.
+Lean Labs helps clients cut through noise by focusing on clarity, strategy, and evidence-based improvements. They emphasize messaging that aligns with buyers, websites built for conversion, experiments that drive meaningful outcomes, and clean, accurate attribution. They operate as a lean, specialized growth team that integrates with your company. Their sequenced framework ensures that fundamentals are addressed before scaling, leading to more efficient spend, stronger performance, and predictable pipeline.
 
 Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Success, Leanlabs Lead Generation Website, Leanlabs Hubspotters, Leanlabs Websites
 
@@ -290,15 +281,11 @@ Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Success, 
 
 #### 19. What is Lean Labs' price?
 
-**Status:** ✅ | **Time:** 12437ms
+**Status:** ✅ | **Time:** 1759ms
 
 **Response:**
 
-Lean Labs offers a range of services designed to help SaaS and tech brands improve their marketing effectiveness and achieve predictable growth. While specific pricing details are not publicly disclosed, the company emphasizes a sequenced approach to fixing fundamental growth systems before scaling acquisition efforts. This includes focusing on messaging clarity, buyer-aligned funnels, accurate attribution, and conversion improvements.
-
-Companies typically engage with Lean Labs when their current marketing efforts are not yielding desired results, such as low website conversion rates, inconsistent pipelines, or high customer acquisition costs. The process begins with a conversation to understand your specific challenges and opportunities. Lean Labs then evaluates your messaging, website performance, funnel, and overall marketing system structure to identify the most impactful areas for improvement.
-
-To learn more about their programs and pricing, the best next step is to connect directly with the Lean Labs team. They can provide clarity on how their services can help chart your growth path and address your unique marketing needs.
+The provided documentation does not contain specific pricing information for Lean Labs. However, it does mention that potential clients can inquire about their programs and pricing by connecting with their team. The process begins with a conversation to understand marketing struggles and identify opportunities for improvement, leading to clarity on what's working, what isn't, and the next steps for predictable growth.
 
 Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Websites, Leanlabs Hubspotters, Leanlabs Success, Leanlabs Lead Generation Website
 
@@ -306,13 +293,11 @@ Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Websites,
 
 #### 20. How much does Lean Labs charge?
 
-**Status:** ✅ | **Time:** 1905ms
+**Status:** ✅ | **Time:** 1767ms
 
 **Response:**
 
-Lean Labs offers a range of programs and pricing designed to help SaaS and tech brands achieve predictable growth. While specific figures aren't publicly disclosed, the agency encourages potential clients to connect directly with their team for clarity on costs and to develop a personalized growth plan. This initial conversation is crucial for understanding your unique marketing challenges and identifying opportunities for improvement.
-
-The agency's approach focuses on building foundational growth systems, addressing issues like website conversion, customer acquisition, and messaging clarity. They emphasize a sequenced approach to marketing, prioritizing fundamentals before scaling efforts to ensure efficient spend and stronger performance. To learn more about how Lean Labs can help your business and to get a clear understanding of their investment, it's best to reach out to their team.
+To understand how much Lean Labs charges, you can explore their programs and pricing. Lean Labs invites potential clients to connect with their team to gain clarity and build a growth plan.
 
 Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Websites, Leanlabs Hubspotters, Leanlabs Success, Leanlabs Lead Generation Website
 
@@ -322,15 +307,15 @@ Sources: All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Websites,
 
 #### 21. Give me all details about Lean Labs services and pricing
 
-**Status:** ✅ | **Time:** 2196ms
+**Status:** ✅ | **Time:** 1873ms
 
 **Response:**
 
-Lean Labs offers a comprehensive suite of AI-powered growth marketing services designed to help SaaS and tech brands achieve predictable, profitable customer acquisition. Their approach focuses on fixing fundamental growth systems, including website performance, messaging, and full-funnel journey architecture. Companies typically engage Lean Labs when their marketing efforts are not yielding desired results, such as low website conversion rates, inconsistent pipelines, or high customer acquisition costs. Lean Labs aims to diagnose issues, repair underlying systems, and build a robust growth engine.
+Lean Labs offers a range of growth services for SaaS and tech brands, focusing on improving marketing effectiveness through fundamental growth systems. They address issues such as website conversion, customer acquisition, inconsistent pipelines, and high customer acquisition costs. Their approach involves clear positioning, buyer-aligned messaging, full-funnel journey architecture, and conversion-focused website experiences.
 
-For detailed information on pricing, Lean Labs directs potential clients to their dedicated [Pricing](https://www.leanlabs.com/pricing) page. They also provide examples of their work and highlight their areas of expertise in strategy, marketing, design, and development, augmented by AI. If you are interested in building your growth team in-house, Lean Labs offers resources on that topic as well. They operate remotely, emphasizing the benefits of distributed teams.
+For details on pricing, you can visit the Lean Labs pricing page. Lean Labs also provides examples of their work, outlines their areas of expertise in growth services, and offers guidance on building an in-house growth team. They operate remotely and are available to discuss how to get started with a gameplan request.
 
-To get started with Lean Labs, the initial step involves a conversation to understand your specific marketing challenges and growth opportunities. They provide clarity on what's working, what isn't, and outline the necessary steps for improvement. Lean Labs employs a sequenced approach to evaluate key fundamentals like messaging, website performance, and overall marketing system structure to identify the most impactful fixes and build a smarter growth path. You can request a game plan by visiting their [Request a gameplan](https://www.leanlabs.com/schedule) page.
+Lean Labs helps companies that are struggling with marketing results by diagnosing issues, repairing underlying systems, and building a growth engine. They emphasize a sequenced approach to evaluate messaging, website performance, funnel, and overall marketing system structure to identify what needs to be fixed first for the biggest impact.
 
 Sources: HYBRID GROWTH TEAM, All About Lean Labs | An AI Growth Marketing Agency, Leanlabs Websites, Leanlabs Hubspotters, Leanlabs Success
 
@@ -338,7 +323,7 @@ Sources: HYBRID GROWTH TEAM, All About Lean Labs | An AI Growth Marketing Agency
 
 #### 22. Hi
 
-**Status:** ✅ | **Time:** 583ms
+**Status:** ✅ | **Time:** 892ms
 
 **Response:**
 
@@ -348,11 +333,11 @@ Hello there! Welcome to the Factor8 Knowledge Hub. How can I help you find the i
 
 #### 23. Thanks!
 
-**Status:** ✅ | **Time:** 548ms
+**Status:** ✅ | **Time:** 606ms
 
 **Response:**
 
-You're very welcome! I'm happy to help if you have any more questions about the Factor8 Knowledge Hub.
+You're most welcome! I'm happy to help if you have any more questions about the Factor8 Knowledge Hub.
 
 ---
 
@@ -360,26 +345,26 @@ You're very welcome! I'm happy to help if you have any more questions about the 
 
 | # | Category | Query | Time | Status |
 |---|----------|-------|------|--------|
-| 1 | Factual | What does Lean Labs do? | 3244ms | ✅ |
-| 2 | Factual | What services does Lean Labs offer? | 2321ms | ✅ |
-| 3 | Factual | Who is Lean Labs' target audience? | 12217ms | ✅ |
-| 4 | Specificity | What is Lean Labs' pricing? | 2120ms | ✅ |
-| 5 | Specificity | How much does Lean Labs charge per ... | 1677ms | ✅ |
-| 6 | Specificity | What results have Lean Labs clients... | 2299ms | ✅ |
-| 7 | Specificity | How long does Lean Labs onboarding ... | 1880ms | ✅ |
-| 8 | Reasoning | What's the difference between Lean ... | 2383ms | ✅ |
-| 9 | Reasoning | How is Lean Labs different from oth... | 1839ms | ✅ |
-| 10 | Reasoning | What makes Lean Labs' approach uniq... | 1813ms | ✅ |
-| 11 | Process | How do I get started with Lean Labs... | 1961ms | ✅ |
-| 12 | Process | What is Lean Labs' methodology? | 2081ms | ✅ |
-| 13 | Process | What happens after I sign up with L... | 2228ms | ✅ |
-| 14 | Edge Case | Does Lean Labs offer refunds? | 5907ms | ✅ |
-| 15 | Edge Case | What is Lean Labs' phone number? | 1323ms | ✅ |
-| 16 | Edge Case | Tell me about quantum computing | 4372ms | ✅ |
-| 17 | Ambiguous | Is Lean Labs worth it? | 38685ms | ✅ |
-| 18 | Ambiguous | What does Lean Labs do for SEO? | 2833ms | ✅ |
-| 19 | Consistency | What is Lean Labs' price? | 12437ms | ✅ |
-| 20 | Consistency | How much does Lean Labs charge? | 1905ms | ✅ |
-| 21 | Stress | Give me all details about Lean Labs... | 2196ms | ✅ |
-| 22 | Stress | Hi | 583ms | ✅ |
-| 23 | Stress | Thanks! | 548ms | ✅ |
+| 1 | Factual | What does Lean Labs do? | 3158ms | ✅ |
+| 2 | Factual | What services does Lean Labs offer? | 2369ms | ✅ |
+| 3 | Factual | Who is Lean Labs' target audience? | 1686ms | ✅ |
+| 4 | Specificity | What is Lean Labs' pricing? | 1265ms | ✅ |
+| 5 | Specificity | How much does Lean Labs charge per ... | 1488ms | ✅ |
+| 6 | Specificity | What results have Lean Labs clients... | 1809ms | ✅ |
+| 7 | Specificity | How long does Lean Labs onboarding ... | 1680ms | ✅ |
+| 8 | Reasoning | What's the difference between Lean ... | 2670ms | ✅ |
+| 9 | Reasoning | How is Lean Labs different from oth... | 2286ms | ✅ |
+| 10 | Reasoning | What makes Lean Labs' approach uniq... | 2533ms | ✅ |
+| 11 | Process | How do I get started with Lean Labs... | 3761ms | ✅ |
+| 12 | Process | What is Lean Labs' methodology? | 2696ms | ✅ |
+| 13 | Process | What happens after I sign up with L... | 2149ms | ✅ |
+| 14 | Edge Case | Does Lean Labs offer refunds? | 1651ms | ✅ |
+| 15 | Edge Case | What is Lean Labs' phone number? | 1543ms | ✅ |
+| 16 | Edge Case | Tell me about quantum computing | 1393ms | ✅ |
+| 17 | Ambiguous | Is Lean Labs worth it? | 2158ms | ✅ |
+| 18 | Ambiguous | What does Lean Labs do for SEO? | 1999ms | ✅ |
+| 19 | Consistency | What is Lean Labs' price? | 1759ms | ✅ |
+| 20 | Consistency | How much does Lean Labs charge? | 1767ms | ✅ |
+| 21 | Stress | Give me all details about Lean Labs... | 1873ms | ✅ |
+| 22 | Stress | Hi | 892ms | ✅ |
+| 23 | Stress | Thanks! | 606ms | ✅ |

@@ -5,7 +5,9 @@ Uses Gemini 2.5 Flash-Lite for fast responses.
 Target: ~1000ms base overhead + tool time.
 """
 
+import asyncio
 import logging
+import re
 from datetime import datetime
 from typing import Any, AsyncGenerator, Dict, List, Optional
 
@@ -129,6 +131,36 @@ def _is_vague_answer(text: str) -> bool:
     return any(phrase in text_lower for phrase in vague_phrases) or len(text) < 80
 
 
+def _extract_entity_names(text: str) -> List[str]:
+    """Extract potential entity names from a query for Neo4j lookup."""
+    # Find capitalized words/phrases that might be entity names
+    # This catches company names, product names, people names, etc.
+    words = text.split()
+    entities = []
+
+    # Look for capitalized words (excluding first word and common words)
+    skip_words = {"what", "who", "how", "why", "when", "where", "does", "is", "are", "the", "a", "an", "for", "with", "about", "i"}
+
+    for i, word in enumerate(words):
+        clean_word = re.sub(r'[^\w]', '', word)
+        if clean_word and clean_word[0].isupper() and clean_word.lower() not in skip_words:
+            entities.append(clean_word)
+
+    # Also look for quoted terms
+    quoted = re.findall(r'"([^"]+)"', text)
+    entities.extend(quoted)
+
+    # Return unique entities, max 3
+    seen = set()
+    unique = []
+    for e in entities:
+        if e.lower() not in seen:
+            seen.add(e.lower())
+            unique.append(e)
+
+    return unique[:3]
+
+
 async def fast_chat_stream(
     message: str,
     org_id: str,
@@ -186,21 +218,46 @@ Be warm and helpful. Offer to help with questions about the knowledge base."""
             }
             return
 
-        # Step 2: Search KB for information queries
-        logger.info("[AGENT] Classified as SEARCH - querying KB")
+        # Step 2: Search KB and Knowledge Graph in parallel
+        logger.info("[AGENT] Classified as SEARCH - querying KB and Knowledge Graph")
         yield {"type": "status", "data": "Searching..."}
         yield {"type": "tool_use", "data": {"name": "search_kb", "input": {"query": message}}}
 
-        search_result = await fast_search_kb(
-            query=message,
-            org_id=org_id,
-            limit=8,
-        )
+        # Extract potential entity names for graph lookup
+        entity_names = _extract_entity_names(message)
+        logger.info(f"[AGENT] Extracted entities: {entity_names}")
 
+        # Run vector search and entity lookups in parallel
+        search_tasks = [fast_search_kb(query=message, org_id=org_id, limit=8)]
+
+        # Add entity lookups for each extracted name
+        for entity_name in entity_names:
+            search_tasks.append(get_entities_fast(entity_name=entity_name, org_id=org_id))
+
+        results = await asyncio.gather(*search_tasks, return_exceptions=True)
+
+        # Process vector search result
+        search_result = results[0] if not isinstance(results[0], Exception) else {"content": "Search failed", "results_count": 0}
         search_content = search_result.get("content", "No results found")
         source_docs = search_result.get("source_documents", [])
+
+        # Process entity results and combine
+        entity_content = ""
+        for i, result in enumerate(results[1:], 1):
+            if isinstance(result, Exception):
+                logger.warning(f"[AGENT] Entity lookup failed: {result}")
+                continue
+            if result.get("found"):
+                entity_content += "\n\n## Knowledge Graph Results\n" + result.get("content", "")
+
+        # Combine all content
+        combined_content = search_content
+        if entity_content:
+            combined_content += entity_content
+            logger.info(f"[AGENT] Added entity results from Knowledge Graph")
+
         sources_list = ", ".join(source_docs[:5]) if source_docs else "Unknown"
-        logger.info(f"[AGENT] Search done, {search_result.get('results_count', 0)} results")
+        logger.info(f"[AGENT] Search done, {search_result.get('results_count', 0)} vector results, {len(entity_names)} entity lookups")
 
         # Build conversation history for context
         history = get_session_history(session_id)
@@ -219,7 +276,7 @@ Be warm and helpful. Offer to help with questions about the knowledge base."""
 User question: {message}
 
 Context:
-{search_content}
+{combined_content}
 
 CRITICAL RULE:
 You must ONLY answer questions using information from the Context above. If the Context does not contain relevant information to answer the question, respond with:
@@ -251,10 +308,13 @@ RESPONSE RULES:
             yield {"type": "status", "data": "Getting more context..."}
 
             search_result = await fast_search_kb(query=message, org_id=org_id, limit=12)
-            search_content = search_result.get("content", "No results found")
+            retry_content = search_result.get("content", "No results found")
+            if entity_content:
+                retry_content += entity_content
 
+            retry_prompt = answer_prompt.replace(combined_content, retry_content)
             retry_response = model.generate_content(
-                answer_prompt.replace(search_content, search_result.get("content", "")),
+                retry_prompt,
                 generation_config=genai.types.GenerationConfig(max_output_tokens=2048, temperature=0.3),
             )
             final_content = retry_response.text
