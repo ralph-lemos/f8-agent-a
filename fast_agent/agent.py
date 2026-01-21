@@ -218,17 +218,49 @@ Be warm and helpful. Offer to help with questions about the knowledge base."""
             }
             return
 
-        # Step 2: Search KB and Knowledge Graph in parallel
+        # Step 2: Build conversation context and expand query if needed
+        history = get_session_history(session_id)
+        search_query = message
+
+        # If there's conversation history, expand the query to resolve pronouns
+        if history and len(history) >= 2:
+            recent_context = ""
+            for msg in history[-4:]:  # Last 2 exchanges
+                role = "User" if msg["role"] == "user" else "Assistant"
+                content = msg["content"][:200]
+                recent_context += f"{role}: {content}\n"
+
+            expand_prompt = f"""Given this conversation:
+{recent_context}
+
+Current question: "{message}"
+
+If the current question contains pronouns (they, it, them, this, that) or references something from the conversation, rewrite it as a standalone question. Otherwise, return the original question.
+
+Return ONLY the rewritten question, nothing else."""
+
+            try:
+                expand_response = model.generate_content(
+                    expand_prompt,
+                    generation_config=genai.types.GenerationConfig(max_output_tokens=100, temperature=0.0),
+                )
+                search_query = expand_response.text.strip().strip('"')
+                if search_query != message:
+                    logger.info(f"[AGENT] Expanded query: '{message}' -> '{search_query}'")
+            except Exception as e:
+                logger.warning(f"[AGENT] Query expansion failed: {e}")
+
+        # Search KB and Knowledge Graph in parallel
         logger.info("[AGENT] Classified as SEARCH - querying KB and Knowledge Graph")
         yield {"type": "status", "data": "Searching..."}
-        yield {"type": "tool_use", "data": {"name": "search_kb", "input": {"query": message}}}
+        yield {"type": "tool_use", "data": {"name": "search_kb", "input": {"query": search_query}}}
 
         # Extract potential entity names for graph lookup
-        entity_names = _extract_entity_names(message)
+        entity_names = _extract_entity_names(search_query)
         logger.info(f"[AGENT] Extracted entities: {entity_names}")
 
         # Run vector search and entity lookups in parallel
-        search_tasks = [fast_search_kb(query=message, org_id=org_id, limit=8)]
+        search_tasks = [fast_search_kb(query=search_query, org_id=org_id, limit=8)]
 
         # Add entity lookups for each extracted name
         for entity_name in entity_names:
@@ -259,8 +291,7 @@ Be warm and helpful. Offer to help with questions about the knowledge base."""
         sources_list = ", ".join(source_docs[:5]) if source_docs else "Unknown"
         logger.info(f"[AGENT] Search done, {search_result.get('results_count', 0)} vector results, {len(entity_names)} entity lookups")
 
-        # Build conversation history for context
-        history = get_session_history(session_id)
+        # Build conversation context for the answer prompt
         conversation_context = ""
         if history:
             conversation_context = "\n\n--- PREVIOUS CONVERSATION ---\n"
@@ -307,7 +338,7 @@ RESPONSE RULES:
             logger.info("[AGENT] Vague answer, retrying with more results")
             yield {"type": "status", "data": "Getting more context..."}
 
-            search_result = await fast_search_kb(query=message, org_id=org_id, limit=12)
+            search_result = await fast_search_kb(query=search_query, org_id=org_id, limit=12)
             retry_content = search_result.get("content", "No results found")
             if entity_content:
                 retry_content += entity_content

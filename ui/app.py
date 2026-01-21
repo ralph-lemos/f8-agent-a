@@ -5,6 +5,7 @@ Usage:
     streamlit run ui/app.py
 """
 import os
+import uuid
 import streamlit as st
 import httpx
 import json
@@ -73,7 +74,7 @@ if "org_id" not in st.session_state:
     st.session_state.org_id = os.environ.get("ORG_ID", "00000000-0000-0000-0000-000000000001")
 
 if "session_id" not in st.session_state:
-    st.session_state.session_id = None
+    st.session_state.session_id = str(uuid.uuid4())
 
 # ============================================================
 # API CLIENT
